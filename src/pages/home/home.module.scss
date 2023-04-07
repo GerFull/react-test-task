@@ -1,0 +1,13 @@
+@import "mixins";
+
+.home{
+   width: 100vw;
+   height: 100vh;
+   background-color: $background-black;
+   display: flex;
+   gap: 30px;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+}

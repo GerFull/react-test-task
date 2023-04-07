@@ -1,0 +1,98 @@
+@import "mixins";
+
+.product {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+   position: relative;
+   background-color: $background-black;
+
+
+
+   &__img {
+      width: 500px;
+   }
+
+   &__back{
+      color: white;
+      
+   }
+
+   &__changeImg {
+      display: flex;
+      justify-content: space-between;
+      @include interMedium();
+      font-size: 40px;
+      user-select: none;
+      color: white;
+      p{
+         cursor: pointer;
+      }
+   }
+
+   &__size {
+      color: white;
+      padding: 2px;
+      cursor: pointer;
+      background-color: $hover_color;
+      &_container {
+         display: flex;
+         gap: 6px;
+      }
+
+      &_active {
+         background-color: $hover_color;
+         padding: 2px;
+         color: white;
+         border: 1px solid white;
+      }
+
+      &_disable {
+         background-color: $hover_color;
+         padding: 2px;
+         color: #bdbdbd;
+         background-color: $hover_color;
+         opacity: 0.5;
+         cursor: not-allowed;
+      }
+   }
+
+   &__color {
+      background-color: $hover_color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+      @include interRegular();
+      cursor: pointer;
+
+      &_container {
+         margin-top: 15px;
+         display: flex;
+         width: 100%;
+         flex-direction: column;
+         gap: 10px;
+         align-items: center;
+         justify-content: center;
+      }
+
+      &_active {
+         background-color: $hover_color;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: white;
+         user-select: none;
+         border: 1px solid white;
+         width: 100%;
+         padding: 5px;
+         @include interRegular();
+         border-radius: 5px;
+      }
+   }
+}
